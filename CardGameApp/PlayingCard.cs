@@ -8,7 +8,8 @@ namespace CardGameApp
 {
 	public class PlayingCard
 	{
-		public enum PlayingCards
+		public bool isCardVisible = false;
+		public enum PlayingCardsValue
 		{
 			None,
 			Ace,
@@ -33,8 +34,5 @@ namespace CardGameApp
 			Hearts,
 			Spades
 		}
-
-		public bool isCardVisible = false;
-
 	}
 }
