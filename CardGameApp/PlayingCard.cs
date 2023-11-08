@@ -9,7 +9,7 @@ namespace CardGameApp
 {
 	public class PlayingCard
 	{
-		public bool isCardVisible { get; set; }
+		public bool IsCardVisible { get; private set; }
 
 		public RankEnums Rank {  get; }
 
@@ -21,10 +21,12 @@ namespace CardGameApp
 			Suit = suit;
 
         }
-		
-		//Card = new ((PlayingCardsValue)i, (PlayingCardsType)j);
+        public PlayingCard()
+        {
+            
+        }
 
-		public enum RankEnums
+        public enum RankEnums
 		{
 			None,
 			Ace,
@@ -48,6 +50,11 @@ namespace CardGameApp
 			Diamonds,
 			Hearts,
 			Spades
+		}
+
+		public void SetIsCardVisible(bool input)
+		{
+			IsCardVisible = input;
 		}
 
 		public override string ToString()

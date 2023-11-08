@@ -18,5 +18,17 @@ namespace CardGameApp.UnitTests
 
 			Assert.That(expected, Is.EqualTo(totalCards));
 		}
+
+		[Test]
+		public void VisibleCard_ViewBoolOutput_ReturnResult()
+		{
+			PlayingCard boolTest = new();
+			boolTest.SetIsCardVisible(true);
+			bool result = boolTest.IsCardVisible;
+
+			bool expected = true;
+
+			Assert.That(expected, Is.EqualTo(result));
+		}
 	}
 }
