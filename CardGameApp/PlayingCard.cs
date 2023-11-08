@@ -15,15 +15,11 @@ namespace CardGameApp
 
 		public SuitEnums Suit { get; }
 
-        public PlayingCard(RankEnums rank, SuitEnums suit)
+        public PlayingCard(RankEnums rank = 0, SuitEnums suit = 0)
         {
             Rank = rank;
 			Suit = suit;
 
-        }
-        public PlayingCard()
-        {
-            
         }
 
         public enum RankEnums
