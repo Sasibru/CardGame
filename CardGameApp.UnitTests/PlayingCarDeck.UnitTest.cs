@@ -8,7 +8,7 @@ namespace CardGameApp.UnitTests
 		}
 
 		[Test]
-		public void Count_TotalCards_ReturnSum()
+		public void CreateDeck_ListCount_ReturnSum()
 		{
 			PlayingCardDeck playingCardDeck = new();
 			playingCardDeck.CreateDeck();
@@ -20,7 +20,18 @@ namespace CardGameApp.UnitTests
 		}
 
 		[Test]
-		public void VisibleCard_ViewBoolOutput_ReturnResult()
+		public void ContainsAllCards_CheckAllSuitsAndRanks_ReturnSum()
+		{
+			PlayingCardDeck playingCardDeck = new();
+			bool testMethod = playingCardDeck.ContainsAllCards();
+
+			bool expected = true;
+
+			Assert.That(testMethod, Is.EqualTo(expected));
+		}
+
+		[Test]
+		public void SetIsCardVisible_SetToTrue_ReturnBoolOutput()
 		{
 			PlayingCard boolTest = new();
 			boolTest.SetIsCardVisible(true);
