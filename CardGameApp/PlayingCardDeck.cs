@@ -4,23 +4,32 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using static CardGameApp.PlayingCard;
 
 namespace CardGameApp
 {
 	public class PlayingCardDeck
 	{
-		List<PlayingCard> deckList = new();
-		public PlayingCard.PlayingCardsType PlayingCardType { get; private set; }
-		public PlayingCard.PlayingCardsValue PlayingCardValue { get; private set; }
-		public void CreateCard(PlayingCard.PlayingCardsType playingCardType, PlayingCard.PlayingCardsValue playingCardValue)
-		{
-			PlayingCardType = playingCardType;
-			PlayingCardValue = playingCardValue;
-		}
+
+		public List<PlayingCard> deckList = new();
 
 		public void CreateDeck()
 		{
-			
+			deckList = new List<PlayingCard>();
+			foreach(SuitEnums suit in Enum.GetValues(typeof(SuitEnums)))
+			{
+				foreach(RankEnums rank in Enum.GetValues(typeof(RankEnums)))
+				{
+					if(rank == 0)
+					{
+						continue;
+					}
+					else
+					{
+					deckList.Add(new PlayingCard(rank, suit));
+					}
+				}
+			}
 		}
 
 	}
