@@ -35,7 +35,7 @@ namespace CardGameApp.UnitTests
 		{
 			PlayingCard boolTest = new();
 			boolTest.SetIsCardVisible(true);
-			bool result = boolTest.IsCardVisible;
+			bool result = boolTest.GetIsCardVisible();
 
 			bool expected = true;
 
