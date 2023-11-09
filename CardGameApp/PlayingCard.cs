@@ -9,7 +9,7 @@ namespace CardGameApp
 {
 	public class PlayingCard
 	{
-		public bool IsCardVisible { get; private set; }
+		private bool IsCardVisible { get; set; }
 
 		public RankEnums Rank {  get; }
 
